@@ -6,6 +6,15 @@ namespace TestConsole {
     class Program {
 
         static void Main(string[] args) {
+            var jsonpath = @"C:\repos\dotnetcore30\AppConfigLibrarySolution\TestConsole\configdata.json";
+            using(var json = new AppConfigJson<Json.ConfigData>(jsonpath)) {
+                System.Diagnostics.Debug.WriteLine($"The next int is {json.AppConfig.nextInt}");
+                System.Diagnostics.Debug.WriteLine($"The connStr is {json.AppConfig.connStr}");
+                System.Diagnostics.Debug.WriteLine($"Debuggins is {json.AppConfig.debugging}");
+                json.AppConfig.nextInt = 101;
+            }
+        }
+        static void Test() { 
             var jsonfile = @"C:\repos\dotnetcore30\AppConfigLibrarySolution\TestConsole\appConfig.json";
             using(var cfg = new AppConfigJson<App.Config>(jsonfile)) {
                 cfg.AppConfig.Name = "Greg";

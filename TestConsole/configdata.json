@@ -1,0 +1,5 @@
+{
+  "nextInt": 101,
+  "connStr": "server=localhost\\sqlexpress;database=AppDb;trusted_connection=true;",
+  "debugging": true
+}
