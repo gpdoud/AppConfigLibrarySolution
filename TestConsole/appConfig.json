@@ -1,0 +1,11 @@
+{
+  "Name": "Greg",
+  "Counter": 1,
+  "Active": true,
+  "DOB": "1957-08-27T00:00:00",
+  "Sql": {
+    "Server": "localhost\\sqlexpress",
+    "Database": "AppDb",
+    "TrustedConnection": true
+  }
+}
